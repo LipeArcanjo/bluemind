@@ -1,95 +1,74 @@
+"use client";
+
+import React from "react";
+// Import dos componentes
+import Header from "../components/Header";
+import Footer from "@/components/Footer";
+// Import dos estilos
+import { BackgroundHome, CardContent, CardsWrapper, FirstContent, ImageContent, MainContent, MainTitle, SecondContent, TextContent } from "./styles/home.styles"
+// Import das imagens
 import Image from "next/image";
-import styles from "./page.module.css";
+import FirstContentImage from "../../public/images/First-content-Homepage-IMG.jpg";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
+    <React.Fragment>
+      {/* BG IMAGE */}
+      <BackgroundHome>
+        {/* HEADER */}
+        <Header />
+
+        <MainTitle>
+          <h1>Criando soluções <strong>azuis</strong></h1>
+          <h1> para um futuro</h1>
+          <h1><strong>sustentável.</strong></h1>
+        </MainTitle>
+
+      </BackgroundHome>
+      <MainContent>
+        <FirstContent>
+          <TextContent>
+            <p>
+              BlueMind é uma plataforma inovadora para monitoramento marinho, permitindo que pescadores, mergulhadores, surfistas entre outros entusiastas marinhos compartilhem observações sobre a vida marinha e reportem poluição em tempo real. Utilizando tecnologia de ponta, a plataforma contribui para a preservação dos oceanos, fornecendo dados valiosos para pesquisas científicas e órgãos ambientais, ajudando na tomada de decisões.
+            </p>
+            <p>
+              Nossa missão é conectar a comunidade marinha, fornecer dados valiosos para cientistas e ajudar órgãos responsáveis a tratar áreas afetadas, com conscientização, engajamento e sustentabilidade dos recursos marinhos.
+            </p>
+            <button>
+              Button
+            </button>
+          </TextContent>
+          <ImageContent>
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+              src={FirstContentImage}
+              alt="Corais coloridos brilhando em neon"
             />
-          </a>
-        </div>
-      </div>
+          </ImageContent>
+        </FirstContent>
+        <SecondContent>
+          <h2>Produtos</h2>
+          <CardsWrapper>
+            <CardContent>
+              <p>imagem</p>
+              <h3>Card 1</h3>
+            </CardContent>
+            <CardContent>
+              <p>imagem</p>
+              <h3>Card 2</h3>
+            </CardContent>
+            <CardContent>
+              <p>imagem</p>
+              <h3>Card 3</h3>
+            </CardContent>
+            <CardContent>
+              <p>imagem</p>
+              <h3>Card 4</h3>
+            </CardContent>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          </CardsWrapper>
+        </SecondContent>
+      </MainContent>
+      <Footer />
+    </React.Fragment>
   );
 }
