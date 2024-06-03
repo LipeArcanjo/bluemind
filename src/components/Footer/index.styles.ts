@@ -15,6 +15,7 @@ export const StyledFooter = styled.div`
 `;
 
 export const FooterBg = styled.footer`
+    margin-top: 5vh;
     width: 100%;
     background-color: ${colors.background.footer};
     border-top: ${colors.commom.gray};

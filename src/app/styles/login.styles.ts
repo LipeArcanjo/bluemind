@@ -8,6 +8,12 @@ export const LoginContainer = styled.div`
     height: 100vh;
     width: 100%;
     z-index: -1;
+    display: grid;
+    
+    div{
+        justify-self: center;
+        align-self: center;
+    }
 `;
 
 export const LoginBox = styled.div`

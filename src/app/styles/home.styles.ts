@@ -14,7 +14,7 @@ export const BackgroundHome = styled.div`
 `;
 
 export const MainTitle = styled.div`
-    padding: 10vh 0;
+    padding: 29vh 0;
     text-align: center;
     font-size: 6rem;
     color: #fff;
