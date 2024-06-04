@@ -68,18 +68,31 @@ export const CardsWrapper = styled.div`
 `
 
 export const Card = styled.div`
-    border: 1px solid ${colors.blue.border};
+    border: 2px solid ${colors.blue.border};
+    border-radius: 10px;
     display: flex;
     flex-direction: column-reverse;
     max-width: 300px;
+
+    .image-card {
+        border-radius: 10px 10px 0 0;
+    }
 `
 
 export const CardContent = styled.div`
     & h3 {
+        padding: 1vh 0;
         font-family: ${inter.style.fontFamily};
-        line-height: 1.2;
+        line-height: 1.5;
         font-size: 1.5rem;
+        border: 1px solid ${colors.blue.border};
+        background-color: ${colors.major.main};
+        color: ${colors.commom.white}
     }
+
+    & h3:last-child {
+        border-radius: 0 0 10px 10px;
+    }   
 `
 
 

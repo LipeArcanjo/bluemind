@@ -9,6 +9,10 @@ import { BackgroundHome, CardContent, CardsWrapper, FirstContent, ImageContent, 
 // Import das imagens
 import Image from "next/image";
 import FirstContentImage from "../../public/images/First-content-Homepage-IMG.jpg";
+import monitorizacao from "../../public/images/monitorizacao.png";
+import conscicentizacao from "../../public/images/conscientizacao.png";
+import tratar from "../../public/images/tratar.png";
+import cientista from "../../public/images/cientista.png";
 
 export default function Home() {
   return (
@@ -46,23 +50,39 @@ export default function Home() {
           </ImageContent>
         </FirstContent>
         <SecondContent>
-          <h2>Produtos</h2>
+          <h2>Benefícios</h2>
           <CardsWrapper>
             <CardContent>
-              <p>imagem</p>
-              <h3>Card 1</h3>
+              <h3>Facilita a monitorização contínua e proativa dos recursos marinhos</h3>
+              <Image
+              src={monitorizacao}
+              alt="Imagem representando a monitorização oceânica."
+              className="image-card"
+              />
             </CardContent>
             <CardContent>
-              <p>imagem</p>
-              <h3>Card 2</h3>
+              <h3>Promove a conscientização da comunidade na preservação marinha</h3>
+              <Image
+              src={conscicentizacao}
+              alt="Imagem representando a monitorização oceânica."
+              className="image-card"
+              />
             </CardContent>
             <CardContent>
-              <p>imagem</p>
-              <h3>Card 3</h3>
+              <h3>Ajuda os órgãos responsáveis a tratar áreas afetadas rapidamente</h3>
+              <Image
+              src={tratar}
+              alt="Imagem representando a monitorização oceânica."
+              className="image-card"
+              />
             </CardContent>
             <CardContent>
-              <p>imagem</p>
-              <h3>Card 4</h3>
+              <h3>Contribuição para bancos de dados científicos robustos</h3>
+              <Image
+              src={cientista}
+              alt="Imagem representando a monitorização oceânica."
+              className="image-card"
+              />
             </CardContent>
 
           </CardsWrapper>

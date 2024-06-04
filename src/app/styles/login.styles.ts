@@ -17,7 +17,7 @@ export const LoginContainer = styled.div`
 `;
 
 export const LoginBox = styled.div`
-    width:400px;
+    width: 360px;
     margin: 0 auto;
     background-color: ${colors.commom.gray};
     padding: 6vh 2vw;

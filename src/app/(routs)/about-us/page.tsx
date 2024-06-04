@@ -4,6 +4,10 @@ import Footer from "@/components/Footer"
 import { BrainImage, Card, CardContent, CardsWrapper, Container, Content, MainContent, TextContent } from "../../styles/aboutus.styles"
 import Header from "@/components/Header"
 import React from "react"
+import Arcanjo from "../../../../public/images/Arcanjo.png";
+import Rabelo from "../../../../public/images/Rabelo.png";
+import Celo from "../../../../public/images/Celo.png";
+import Image from "next/image"
 
 
 export default function AboutUs() {
@@ -39,23 +43,35 @@ export default function AboutUs() {
                                 <h3>Full-stack Developer</h3>
                                 <h3>20 anos</h3>
                             </CardContent>
-                            <p>imagem</p>
+                            <Image 
+                            src={Arcanjo}
+                            alt="Imagem de um dos criadores do projeto, Felipe Arcanjo Matos dos Santos."
+                            className="image-card"
+                            />
                         </Card>
                         <Card>
                             <CardContent>
                                 <h3>Gustavo Rabelo F.</h3>
-                                <h3>Dev</h3>
-                                <h3>Idade</h3>
+                                <h3>Backend Developer</h3>
+                                <h3>20 anos</h3>
                             </CardContent>
-                            <p>imagem</p>
+                            <Image 
+                            src={Rabelo}
+                            alt="Imagem de um dos criadores do projeto, Gustavo Rabelo Freire."
+                            className="image-card"
+                            />
                         </Card>
                         <Card>
                             <CardContent>
                                 <h3>Marcelo Vieira J.</h3>
-                                <h3>Dev</h3>
-                                <h3>Idade</h3>
+                                <h3>Full-stack Developer</h3>
+                                <h3>2X anos</h3>
                             </CardContent>
-                            <p>imagem</p>
+                            <Image 
+                            src={Celo}
+                            alt="Imagem de um dos criadores do projeto, Marcelo Vieira Junior."
+                            className="image-card"
+                            />
                         </Card>
                     </CardsWrapper>
                 </React.Fragment>

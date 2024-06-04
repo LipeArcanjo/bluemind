@@ -80,7 +80,7 @@ export const ImageContent = styled.div`
 // Second Content
 
 export const SecondContent = styled.div`
-    padding: 5vh 0 15vh 0;
+    padding: 5vh 0;
     text-align: center;
 
     & h2{
@@ -96,14 +96,21 @@ export const CardsWrapper = styled.div`
 `
 
 export const CardContent = styled.div`
-    width: 150px;
+    width: 210px;
     display: flex;
-    flex-direction: column;
-    
-    & p{
-        background-color: ${colors.commom.gray};
-        padding: 70px 0;
-        margin-bottom: 2vh;
-        border-radius: 8px;
+    flex-direction: column-reverse;
+
+    & h3{
+        margin-top: 1vh;
+        font-family: ${inter.style.fontFamily};
+        font-size:1rem;
+    }
+
+    & :hover{
+        font-size:1.0rem;
+    }
+
+    .image-card {
+        border-radius: 10px;
     }
 `
