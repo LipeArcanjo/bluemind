@@ -29,6 +29,19 @@ export const FooterColumn = styled.div`
     justify-content: space-between;
 `
 
+export const FooterIcons = styled.div`
+    display: flex;
+    gap: 0.5em;
+
+    & a {
+        color: ${colors.commom.white};
+    }
+
+    .icon {
+        font-size: 2rem;
+    }
+`
+
 export const FooterRow = styled.div`
 
     display: flex;

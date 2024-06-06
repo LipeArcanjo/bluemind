@@ -1,10 +1,29 @@
 "use client";
 
 import React from "react";
-import { FooterBg, FooterColumn, FooterRow, StyledFooter, StyledLink } from "./index.styles"
-import Link from "next/link";
+import { FooterBg, FooterColumn, FooterIcons, FooterRow, StyledFooter, StyledLink } from "./index.styles"
+import { FaSquareXTwitter, FaSquareGithub, FaSquareInstagram } from "react-icons/fa6";
 
 export default function Header() {
+
+    const teamMembers = [
+        { name: "Felipe Arcanjo", rm: "554018" },
+        { name: "Gustavo Rabelo", rm: "553326" },
+        { name: "Marcelo Vieira", rm: "553640" }
+    ];
+
+    const footerLinks = [
+        { href: "/about-us", text: "Sobre nós" },
+        { href: "/login", text: "Painel Adm" },
+        { href: "/register", text: "Registro" }
+    ];
+
+    const socialIcons = [
+        { href: "https://github.com/LipeArcanjo/bluemind", icon: <FaSquareGithub className="icon" /> },
+        { href: "https://www.instagram.com/", icon: <FaSquareInstagram className="icon" /> },
+        { href: "https://x.com", icon: <FaSquareXTwitter className="icon" /> }
+    ];
+
     return (
         <FooterBg>
             <StyledFooter>
@@ -12,32 +31,34 @@ export default function Header() {
                 <FooterColumn>
                     <h3>BlueMind</h3>
                     {/* Precisa colocar os icones */}
-                    <p>icones</p>
+                    <FooterIcons>
+                        {socialIcons.map((social, index) => (
+                            <a key={index} href={social.href} target="_blank" rel="noopener noreferrer">
+                                {social.icon}
+                            </a>
+                        ))}
+                    </FooterIcons>
                 </FooterColumn>
                 {/* Flex row */}
                 <FooterRow>
-                    <>
-                    {/* Precisa fazer um map aqui */}
+                    <React.Fragment>
                         <ul>
-                            <li>Felipe Arcanjo - RM 554018 </li>
-                            <li>Gustavo Rabelo - RM553326</li>
-                            <li>Marcelo Vieira - RM553640</li>
+                            {teamMembers.map((member, index) => (
+                                <li key={index}>
+                                    {member.name} - RM {member.rm}
+                                </li>
+                            ))}
                         </ul>
-                    </>
-                    <>
-                    {/* Precisa fazer um map aqui */}
+                    </React.Fragment>
+                    <React.Fragment>
                         <ul>
-                            <li>
-                                <StyledLink href="/about-us">Sobre nós</StyledLink>
-                            </li>
-                            <li>
-                                <StyledLink href="/login">Painel Adm</StyledLink>
-                            </li>
-                            <li>
-                                <StyledLink href="/register">Registro</StyledLink>
-                            </li>
+                            {footerLinks.map((link, index) => (
+                                <li key={index}>
+                                    <StyledLink href={link.href}>{link.text}</StyledLink>
+                                </li>
+                            ))}
                         </ul>
-                    </>
+                    </React.Fragment>
                 </FooterRow>
             </StyledFooter>
         </FooterBg>

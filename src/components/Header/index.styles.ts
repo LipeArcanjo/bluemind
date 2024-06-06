@@ -41,13 +41,24 @@ export const MenuContent = styled.div`
     right: 0;
     background-color: ${colors.major.main};
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 20px;
     font-family: ${antonio.style.fontFamily};
     font-size: 2rem;
     z-index: 0;
 
     :first-child{
         margin-top: 10vh;
+    }
+
+    .link-menu {
+        padding: 10px;
+    }
+
+    .link-menu:hover{
+        background-color: ${colors.commom.white};
+        color: ${colors.major.main};
+        border-radius: 10px;
+        text-decoration: none;
     }
 `;
 

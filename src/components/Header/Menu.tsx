@@ -12,6 +12,11 @@ export default function Menu() {
         setIsOpen(!isOpen);
     };
 
+    const menuLinks = [
+        { href: "/about-us", text: "SOBRE NÓS" },
+        { href: "/login", text: "PAINEL ADM" },
+        { href: "/register", text: "REGISTRO" },
+    ];
 
     return (
         <React.Fragment>
@@ -20,9 +25,11 @@ export default function Menu() {
             </MenuButton>
             {isOpen && (
                 <MenuContent>
-                    <StyledLink href="/about-us">SOBRE NÓS</StyledLink>
-                    <StyledLink href="/login">PAINEL ADM</StyledLink>
-                    <StyledLink href="/register">REGISTRO</StyledLink>
+                    {menuLinks.map((link, index) => (
+                        <StyledLink key={index} href={link.href} className="link-menu">
+                            {link.text}
+                        </StyledLink>
+                    ))}
                 </MenuContent>
             )}
         </React.Fragment>
