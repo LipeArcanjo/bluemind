@@ -45,7 +45,7 @@ export default function Login() {
             if (data) {
                 sessionStorage.setItem("userToken", data.token);
                 sessionStorage.setItem("fullname", data.fullname);
-                router.push("/");
+                router.push("/dashboard");
             }
 
         } catch (error) {
@@ -79,7 +79,7 @@ export default function Login() {
                         name="password"
                         id="password"
                         placeholder="Digite a senha de acesso:"
-                        value={credencial}
+                        value={senha}
                         onChange={(e) => setSenha(e.target.value)}
                     />
                     <button type="submit">Button</button>
