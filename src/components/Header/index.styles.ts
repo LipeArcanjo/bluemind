@@ -29,10 +29,15 @@ export const HamburgerIcon = styled.span`
 
 export const CloseIcon = styled.span`
     font-size: 3rem;
-    z-index: 1;
+    z-index: 99;
     position: absolute;
     top: 8vh;
     right: 1vw;
+
+    @media screen and (max-width: 1024px){
+        right: 3.5vw;
+        top:6vh;
+    }
 `;
 
 export const MenuContent = styled.div`
@@ -44,7 +49,7 @@ export const MenuContent = styled.div`
     border-radius: 20px;
     font-family: ${antonio.style.fontFamily};
     font-size: 2rem;
-    z-index: 0;
+    z-index: 90;
 
     :first-child{
         margin-top: 10vh;
@@ -59,6 +64,10 @@ export const MenuContent = styled.div`
         color: ${colors.major.main};
         border-radius: 10px;
         text-decoration: none;
+    }
+
+    @media screen and (max-width: 1024px){
+        top:5vh;
     }
 `;
 
