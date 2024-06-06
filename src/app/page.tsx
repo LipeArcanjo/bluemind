@@ -15,6 +15,30 @@ import tratar from "../../public/images/tratar.png";
 import cientista from "../../public/images/cientista.png";
 
 export default function Home() {
+
+  const cardData = [
+    {
+      title: "Facilita a monitorização contínua e proativa dos recursos marinhos",
+      imageSrc: monitorizacao,
+      imageAlt: "Imagem representando a monitorização oceânica."
+    },
+    {
+      title: "Promove a conscientização da comunidade na preservação marinha",
+      imageSrc: conscicentizacao,
+      imageAlt: "Imagem representando a conscientização da comunidade na preservação marinha."
+    },
+    {
+      title: "Ajuda os órgãos responsáveis a tratar áreas afetadas rapidamente",
+      imageSrc: tratar,
+      imageAlt: "Imagem representando os órgãos responsáveis tratando áreas afetadas."
+    },
+    {
+      title: "Contribuição para bancos de dados científicos robustos",
+      imageSrc: cientista,
+      imageAlt: "Imagem representando um Oceanógrafo."
+    }
+  ];
+
   return (
     <React.Fragment>
       {/* BG IMAGE */}
@@ -52,39 +76,16 @@ export default function Home() {
         <SecondContent>
           <h2>Benefícios</h2>
           <CardsWrapper>
-            <CardContent>
-              <h3>Facilita a monitorização contínua e proativa dos recursos marinhos</h3>
-              <Image
-              src={monitorizacao}
-              alt="Imagem representando a monitorização oceânica."
-              className="image-card"
-              />
-            </CardContent>
-            <CardContent>
-              <h3>Promove a conscientização da comunidade na preservação marinha</h3>
-              <Image
-              src={conscicentizacao}
-              alt="Imagem representando a monitorização oceânica."
-              className="image-card"
-              />
-            </CardContent>
-            <CardContent>
-              <h3>Ajuda os órgãos responsáveis a tratar áreas afetadas rapidamente</h3>
-              <Image
-              src={tratar}
-              alt="Imagem representando a monitorização oceânica."
-              className="image-card"
-              />
-            </CardContent>
-            <CardContent>
-              <h3>Contribuição para bancos de dados científicos robustos</h3>
-              <Image
-              src={cientista}
-              alt="Imagem representando a monitorização oceânica."
-              className="image-card"
-              />
-            </CardContent>
-
+            {cardData.map((card, index) => (
+              <CardContent key={index}>
+                <h3>{card.title}</h3>
+                <Image
+                  src={card.imageSrc}
+                  alt={card.imageAlt}
+                  className="image-card"
+                />
+              </CardContent>
+            ))}
           </CardsWrapper>
         </SecondContent>
       </MainContent>
