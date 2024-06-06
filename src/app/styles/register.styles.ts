@@ -4,6 +4,10 @@ import { colors } from "../styles/colors"
 
 export const RegisterComponent = styled.div`
     display:flex;
+
+    @media screen and (max-width: 768px) {
+        justify-content: center;
+    }
 `
 
 export const BgRegister = styled.div`
@@ -13,9 +17,11 @@ export const BgRegister = styled.div`
     z-index: -1;
     background-size: cover;
     background-position: center;
+    display:flex;
 
     & h1{
-    padding: 15vh 10vw;
+    padding: 0 10vw;
+    align-self: center;
     text-align: center;
     font-size: 6rem;
     color: #fff;
@@ -23,6 +29,27 @@ export const BgRegister = styled.div`
 
     & strong{
         font-weight: 700;
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        width: 100vw;
+        height: 1215px;
+
+        & h1 {
+            font-size: 2.4rem;
+            position: absolute;
+            top: 19vh;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        & h1 {
+            font-size: 3.06rem;
+            padding: 8vh 0;
+            background-color: ${colors.major.main};
+            color: ${colors.commom.white};
+        }
     }
 `
 
@@ -30,7 +57,7 @@ export const BgRegister = styled.div`
 
 export const FormsContent = styled.form`
     width: 50vw;
-    padding: 14vh 3vw 0 3vw;
+    padding: 13vh 2vw 0 2vw;
     font-family: ${inter.style.fontFamily};
     
     & label {
@@ -50,7 +77,23 @@ export const FormsContent = styled.form`
         height: 100px;
         resize: vertical;
         font-family: ${inter.style.fontFamily};
+    }
 
+    @media screen and (max-width: 768px) {
+        background-color: ${colors.commom.gray};
+        width: 90vw;
+        position: absolute;
+        padding: 3vh 5vw;
+        top: 38vh;
+        border-radius: 20px;
+
+        textarea{
+            height: 150px;
+        }
+    }
+
+    @media screen and (min-height: 1180px) {
+        padding: 20vh 5vw;
     }
 `
 export const FormsColumn = styled.div`
@@ -58,15 +101,25 @@ export const FormsColumn = styled.div`
     flex-direction: column;
     gap: 15px;
 `
+
 export const FormsRow = styled.div`
+    margin: 0 auto;
     display: flex;
     gap: 15px;
+
+    @media screen and (max-width: 767px), screen and (min-height: 1180px) {
+        flex-direction: column;
+    }
 `
 
 export const InputContent = styled.div`
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 288px;
+
+    @media screen and (min-height: 1180px) {
+        width: 380px;
+    }
 `
 
 export const ButtonGroup = styled.div`
@@ -91,4 +144,3 @@ export const ButtonGroup = styled.div`
     color: ${colors.commom.white};
 }
 `
-
