@@ -4,6 +4,10 @@ import { colors } from "../styles/colors"
 
 export const Container = styled.div`
     display: flex;
+
+    @media screen and (max-width: 1024px) {
+        display: grid;
+    }
 `
 
 export const Content = styled.div`
@@ -22,6 +26,22 @@ export const Content = styled.div`
             font-weight: 700;
         }
     }
+
+    @media screen and (max-width: 1024px) {
+        background-color: transparent;
+        position: relative;
+        height: 0;
+        width: auto;
+        top: -45vh;
+        z-index: 99;
+        justify-self: center;
+        
+        & h1 {
+            max-width: 210px;
+            padding: 0;
+            font-size: 4rem;
+            }
+    }
 `
 
 export const BrainImage = styled.div`
@@ -31,6 +51,11 @@ export const BrainImage = styled.div`
     z-index: -1;
     background-size: cover;
     background-position: center;
+
+    @media screen and (max-width: 1024px) {
+        height: 70vh;
+        width: 100vw;
+    }
 `
 
 // Defining the container styles
@@ -48,6 +73,10 @@ export const MainContent = styled.main`
         font-family: ${antonio.style.fontFamily};
         font-size: 2.5rem;
     }
+
+    @media screen and (max-width: 1024px) {
+        width: 85vw;
+    }
 `;
 
 export const TextContent = styled.div`
@@ -60,22 +89,44 @@ export const TextContent = styled.div`
         font-size: 1.5rem;
         text-align: justify;
     }
+
+    @media screen and (max-width: 768px) {
+        p{
+        font-size: 1rem;
+        }
+    }
+
 `;
 
 export const CardsWrapper = styled.div`
     display: flex;
     justify-content: space-evenly;
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+        gap: 2em;
+        margin: 0 auto;
+    }
 `
 
 export const Card = styled.div`
-    border: 2px solid ${colors.blue.border};
+    border: 2px solid ${colors.major.main};
     border-radius: 10px;
     display: flex;
     flex-direction: column-reverse;
-    max-width: 300px;
+    max-width: 255px;
 
     .image-card {
         border-radius: 10px 10px 0 0;
+    }
+
+    @media screen and (min-width: 600px) and (max-width:1024px){
+        max-width: 180px;
+
+        .image-card {
+        max-width: 170px;
+        height: 170px;
+    }
     }
 `
 
@@ -85,7 +136,7 @@ export const CardContent = styled.div`
         font-family: ${inter.style.fontFamily};
         line-height: 1.5;
         font-size: 1.5rem;
-        border: 1px solid ${colors.blue.border};
+        border: 1px solid ${colors.blue.light};
         background-color: ${colors.major.main};
         color: ${colors.commom.white}
     }
