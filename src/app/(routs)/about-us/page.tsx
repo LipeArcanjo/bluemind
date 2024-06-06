@@ -11,6 +11,31 @@ import Image from "next/image"
 
 
 export default function AboutUs() {
+
+    const teamMembers = [
+        {
+            name: "Felipe Arcanjo M. S.",
+            role: "Full-stack Developer",
+            age: "20 anos",
+            imageSrc: Arcanjo,
+            imageAlt: "Imagem de um dos criadores do projeto, Felipe Arcanjo Matos dos Santos."
+        },
+        {
+            name: "Gustavo Rabelo F.",
+            role: "Backend Developer",
+            age: "20 anos",
+            imageSrc: Rabelo,
+            imageAlt: "Imagem de um dos criadores do projeto, Gustavo Rabelo Freire."
+        },
+        {
+            name: "Marcelo Vieira J.",
+            role: "Full-stack Developer",
+            age: "26 anos",
+            imageSrc: Celo,
+            imageAlt: "Imagem de um dos criadores do projeto, Marcelo Vieira Junior."
+        }
+    ];
+
     return (
         <React.Fragment>
 
@@ -37,42 +62,20 @@ export default function AboutUs() {
                 <React.Fragment>
                     <h2>Integrantes</h2>
                     <CardsWrapper>
-                        <Card>
-                            <CardContent>
-                                <h3>Felipe Arcanjo M. S.</h3>
-                                <h3>Full-stack Developer</h3>
-                                <h3>20 anos</h3>
-                            </CardContent>
-                            <Image 
-                            src={Arcanjo}
-                            alt="Imagem de um dos criadores do projeto, Felipe Arcanjo Matos dos Santos."
-                            className="image-card"
-                            />
-                        </Card>
-                        <Card>
-                            <CardContent>
-                                <h3>Gustavo Rabelo F.</h3>
-                                <h3>Backend Developer</h3>
-                                <h3>20 anos</h3>
-                            </CardContent>
-                            <Image 
-                            src={Rabelo}
-                            alt="Imagem de um dos criadores do projeto, Gustavo Rabelo Freire."
-                            className="image-card"
-                            />
-                        </Card>
-                        <Card>
-                            <CardContent>
-                                <h3>Marcelo Vieira J.</h3>
-                                <h3>Full-stack Developer</h3>
-                                <h3>2X anos</h3>
-                            </CardContent>
-                            <Image 
-                            src={Celo}
-                            alt="Imagem de um dos criadores do projeto, Marcelo Vieira Junior."
-                            className="image-card"
-                            />
-                        </Card>
+                        {teamMembers.map((member, index) => (
+                            <Card key={index}>
+                                <CardContent>
+                                    <h3>{member.name}</h3>
+                                    <h3>{member.role}</h3>
+                                    <h3>{member.age}</h3>
+                                </CardContent>
+                                <Image
+                                    src={member.imageSrc}
+                                    alt={member.imageAlt}
+                                    className="image-card"
+                                />
+                            </Card>
+                        ))}
                     </CardsWrapper>
                 </React.Fragment>
             </MainContent>
