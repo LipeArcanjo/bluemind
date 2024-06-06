@@ -11,10 +11,12 @@ export const BackgroundHome = styled.div`
     z-index: -1;
     background-size: cover;
     background-position: center;
+    display: flex;
 `;
 
 export const MainTitle = styled.div`
-    padding: 29vh 0;
+    margin: 0 auto;
+    align-self: center;
     text-align: center;
     font-size: 6rem;
     color: #fff;
@@ -22,6 +24,13 @@ export const MainTitle = styled.div`
 
     & strong{
         font-weight: 700;
+    }
+
+    @media screen and (max-width: 768px) {
+        h1{
+            padding: 0 10vw ;
+            font-size: 4rem;
+        }
     }
 `;
 
@@ -33,38 +42,60 @@ export const MainContent = styled.main`
     display: flex;
     flex-direction: column;
     min-height: auto;
+
+    @media screen and (max-width: 1024px) {
+        width: 85vw;
+    }
 `;
 
 // First Component
 
 export const FirstContent = styled.div`
-    padding: 15vh 0 5vh 0;
+    margin: 5vh 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     font-size: 1rem;
 
+    @media screen and (max-width: 1023px) {
+        flex-direction: column;
+    }
 `;
 
 export const TextContent = styled.div`
     width: 50%;
-    height: 60vh;
+    height: 430px;
     display:flex;
     flex-direction: column;
     font-family: ${inter.style.fontFamily};
     justify-content: space-between;
     line-height: 1.5;
-
+    text-align: justify;
+    
     & Button {
-        padding: 2vh 3vw;
+        padding: 1vh 1.5vw;
         margin: 0 auto;
         font-family: ${inter.style.fontFamily};
-        font-size:2rem;
+        font-size:1.5rem;
         background-color: ${colors.green.light};
         color: ${colors.commom.white};
         border-radius: 50px;
         border: 1px solid ${colors.blue.border}
+    }
+    
+    & p{
+        margin-bottom: 1.2vh;
+    }
+
+    @media screen and (max-width: 1023px) {
+        width: 100%;
+        font-size: 0.9rem;
+        height: auto;
+
+        Button {
+            margin-bottom: 2vh;
+        }
     }
 `
 export const ImageContent = styled.div`
@@ -75,12 +106,16 @@ export const ImageContent = styled.div`
     border-radius: 10px;
     display:flex;
     justify-content:center;
+
+    @media screen and (max-width: 1023px) {
+        max-width: 85vw;
+    }
 `
 
 // Second Content
 
 export const SecondContent = styled.div`
-    padding: 5vh 0;
+    margin: 5vh 0;
     text-align: center;
 
     & h2{
@@ -93,6 +128,18 @@ export const SecondContent = styled.div`
 export const CardsWrapper = styled.div`
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+
+    @media screen and (max-width: 1024px) {
+        flex-flow: wrap;
+        justify-content: center;
+        gap: 2em;
+    }
 `
 
 export const CardContent = styled.div`
@@ -112,5 +159,14 @@ export const CardContent = styled.div`
 
     .image-card {
         border-radius: 10px;
+    }
+
+    @media screen and (max-width: 1024px) {
+        width: 300px;
+
+        .image-card {
+            width: 300px;
+            height:228.5px;
+        }
     }
 `

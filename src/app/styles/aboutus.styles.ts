@@ -18,7 +18,7 @@ export const Content = styled.div`
         color: ${colors.commom.white};
         font-family: ${adventPro.style.fontFamily};
 
-        & strong{
+        & span{
             font-weight: 700;
         }
     }

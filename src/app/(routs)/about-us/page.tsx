@@ -43,7 +43,7 @@ export default function AboutUs() {
                 <Header />
                 <BrainImage />
                 <Content>
-                    <h1><strong>WE ARE </strong>BlueMind</h1>
+                    <h1><span>WE ARE </span>BlueMind</h1>
                 </Content>
             </Container>
 
