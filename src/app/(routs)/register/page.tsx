@@ -99,16 +99,16 @@ export default function Register() {
 
             const data = await response.json();
             console.log("Resposta do servidor:", data); // Mensagem de sucesso ou outra resposta do servidor
-            alert("Seus dados foram enviados, obrigado por contribuir com o meio ambiente!");
+            alert("Seus dados foram enviados juntamente com sua localização, obrigado por contribuir com o meio ambiente!");
 
             // Limpar os campos após o envio
-            // setNomeCompleto("");
-            // setEmail("");
-            // setCpf("");
-            // setCep("");
-            // setTipo("Acidente");
-            // setDescricao("");
-            // setMidia(null);
+            setNomeCompleto("");
+            setEmail("");
+            setCpf("");
+            setCep("");
+            setTipo("Acidente");
+            setDescricao("");
+            setMidia(null);
 
         } catch (error) {
             console.error("Erro durante a requisição:", error);
