@@ -20,6 +20,12 @@ export const NotAuthorized = styled.main`
         font-size: 4.5rem;
         color: ${colors.commom.white}
     }
+
+    @media screen and (max-width: 768px) {
+        h1{
+        font-size: 2rem;
+        }
+    }
 `
 
 export const Container = styled.div`

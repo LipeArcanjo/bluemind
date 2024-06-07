@@ -59,57 +59,59 @@ export default function Dashboard() {
 
     return (
         <React.Fragment>
-            {/* {token ? ( */}
-            <Header />
-            <Container>
-                <Nav>
-                    <h1>Olá, {fullname}!</h1>
-                    <button onClick={handleLogout}>
-                        Sair
-                    </button>
-                </Nav>
-                <Stats>
-                    <StatItem>
-                        <h2>Quantidade Total:</h2>
-                        <p>Acidente: {getCountByType("acidente")}</p>
-                        <p>Incidente: {getCountByType("incidente")}</p>
-                        <p>Vida Marinha: {getCountByType("vida marinha")}</p>
-                    </StatItem>
-                    <StatItem>
-                        <h2>Acidentes em aberto</h2>
-                        <p className="stat-number">0</p>
-                    </StatItem>
-                    <StatItem>
-                        <h2>Incidentes em aberto</h2>
-                        <p className="stat-number">0</p>
-                    </StatItem>
-                </Stats>
-                {isLoading ? (
-                    <Loading>Carregando...</Loading>
-                ) : (
-                    reports.map((report, index) => (
-                        <Card key={index}>
-                            <p><strong>Tipo:</strong> {report.tipo}</p>
-                            <p><strong>Descrição:</strong> {report.descricao}</p>
-                            <p><strong>Latitude:</strong> {report.latitude} <strong>Longitude:</strong> {report.longitude}</p>
-                            <p><strong>Data e Hora:</strong> {report.dataHora}</p>
-                            {report.midia ? (
-                                <a href={report.midia} download className="link-download">Baixar arquivo</a>
-                            ) : (
-                                <p className="link-download">Não existe anexo</p>
-                            )}
-                        </Card>
-                    ))
-                )}
-            </Container>
-            {/* ) : (
+            {token ? (
+                <React.Fragment>
+                    <Header />
+                    <Container>
+                        <Nav>
+                            <h1>Olá, {fullname}!</h1>
+                            <button onClick={handleLogout}>
+                                Sair
+                            </button>
+                        </Nav>
+                        <Stats>
+                            <StatItem>
+                                <h2>Quantidade Total:</h2>
+                                <p>Acidente: {getCountByType("acidente")}</p>
+                                <p>Incidente: {getCountByType("incidente")}</p>
+                                <p>Vida Marinha: {getCountByType("vida marinha")}</p>
+                            </StatItem>
+                            <StatItem>
+                                <h2>Acidentes em aberto</h2>
+                                <p className="stat-number">0</p>
+                            </StatItem>
+                            <StatItem>
+                                <h2>Incidentes em aberto</h2>
+                                <p className="stat-number">0</p>
+                            </StatItem>
+                        </Stats>
+                        {isLoading ? (
+                            <Loading>Carregando...</Loading>
+                        ) : (
+                            reports.map((report, index) => (
+                                <Card key={index}>
+                                    <p><strong>Tipo:</strong> {report.tipo}</p>
+                                    <p><strong>Descrição:</strong> {report.descricao}</p>
+                                    <p><strong>Latitude:</strong> {report.latitude} <strong>Longitude:</strong> {report.longitude}</p>
+                                    <p><strong>Data e Hora:</strong> {report.dataHora}</p>
+                                    {report.midia ? (
+                                        <a href={report.midia} download className="link-download">Baixar arquivo</a>
+                                    ) : (
+                                        <p className="link-download">Não existe anexo</p>
+                                    )}
+                                </Card>
+                            ))
+                        )}
+                    </Container>
+                </React.Fragment>
+            ) : (
                 <React.Fragment>
                     <Header />
                     <NotAuthorized>
                         <h1>Você não está autorizado a acessar esta página, por favor faça login e tente novamente.</h1>
                     </NotAuthorized>
                 </React.Fragment>
-            )} */}
+            )}
         </React.Fragment>
     );
 }
