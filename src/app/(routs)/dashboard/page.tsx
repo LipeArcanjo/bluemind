@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { NotAuthorized, Container, Nav, Card, Button, Stats, StatItem, Loading } from "../../styles/dashboard.styles"
+import { NotAuthorized, Container, Nav, Card, Stats, StatItem, Loading } from "../../styles/dashboard.styles"
 import Header from "@/components/Header";
 
 interface Report {

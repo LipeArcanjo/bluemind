@@ -52,6 +52,37 @@ export const Nav = styled.nav`
     }
 `;
 
+export const Stats = styled.div`
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid ${colors.commom.gray};
+    border-radius: 8px;
+    margin: 5vh auto;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: 2em;
+    }
+`;
+
+export const StatItem = styled.div`
+    font-family: ${inter.style.fontFamily};
+    font-size: 1.2rem;
+    
+    .stat-number{
+        font-size: 3.5rem;
+        text-align: center;
+        color: ${colors.danger}
+        }
+
+    & h2{
+        font-weight: 700;
+    } 
+`;
+
 export const Card = styled.div`
     margin: 2vh auto;
     border: 1px solid ${colors.commom.gray};
@@ -63,45 +94,6 @@ export const Card = styled.div`
     .link-download {
     font-size: 0.75rem;
     }
-`;
-
-export const Button = styled.button`
-    background-color: ${colors.major.secondary};
-    color: ${colors.commom.white};
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    cursor: pointer;
-
-    &:hover {
-        background-color: ${colors.major.main};
-    }
-`;
-
-export const Stats = styled.div`
-    width: 80vw;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: ${colors.blue.light};
-    border-radius: 8px;
-    margin: 5vh auto;
-`;
-
-export const StatItem = styled.div`
-    font-family: ${inter.style.fontFamily};
-    font-size: 1.2rem;
-
-    .stat-number{
-        font-size: 2rem;
-        text-align: center;
-        line-height: 10vh;
-        color: ${colors.danger}
-    }
-
-    & h2{
-        font-weight: 700;
-    } 
 `;
 
 export const Loading = styled.p`
