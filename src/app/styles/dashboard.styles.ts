@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { adventPro } from "../fonts";
+import { adventPro, inter } from "../fonts";
 import { colors } from "../styles/colors"
 
 export const NotAuthorized = styled.main`
@@ -21,3 +21,93 @@ export const NotAuthorized = styled.main`
         color: ${colors.commom.white}
     }
 `
+
+export const Container = styled.div`
+    font-family: ${adventPro};
+    color: ${colors.commom.black};
+    width: 85vw;
+    margin: 20vh auto 0 auto;
+    border: 2px solid ${colors.commom.gray};
+    border-radius: 10px;
+`;
+
+export const Nav = styled.nav`
+    background-color: ${colors.major.main};
+    padding: 20px;
+    color: ${colors.commom.white};
+    font-size: 1.5rem;
+    font-family: ${inter.style.fontFamily};
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    & button {
+        padding: 0 2vw;
+        font-size: 1.2rem;
+        border-radius: 50px;
+        color: ${colors.commom.white};
+        background-color: ${colors.danger};
+        border:none;
+        cursor: pointer;
+    }
+`;
+
+export const Card = styled.div`
+    margin: 2vh auto;
+    border: 1px solid ${colors.commom.gray};
+    width: 80vw;
+    border-radius: 8px;
+    padding: 20px;
+    font-family: ${inter.style.fontFamily};
+    
+    .link-download {
+    font-size: 0.75rem;
+    }
+`;
+
+export const Button = styled.button`
+    background-color: ${colors.major.secondary};
+    color: ${colors.commom.white};
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: ${colors.major.main};
+    }
+`;
+
+export const Stats = styled.div`
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: ${colors.blue.light};
+    border-radius: 8px;
+    margin: 5vh auto;
+`;
+
+export const StatItem = styled.div`
+    font-family: ${inter.style.fontFamily};
+    font-size: 1.2rem;
+
+    .stat-number{
+        font-size: 2rem;
+        text-align: center;
+        line-height: 10vh;
+        color: ${colors.danger}
+    }
+
+    & h2{
+        font-weight: 700;
+    } 
+`;
+
+export const Loading = styled.p`
+    text-align: center;
+    color: ${colors.major.main};
+    font-family: ${inter.style.fontFamily};
+    font-size: 2rem;
+    padding: 5vh 0;
+`;

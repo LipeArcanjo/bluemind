@@ -21,4 +21,5 @@ export const colors = {
         black: "#000000",
         gray: "#E6E6E6"
     },
+    danger: "#7a0012",
 };

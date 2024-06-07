@@ -80,8 +80,6 @@ export default function Register() {
 
         console.log("Payload enviado:", payload);
 
-        const timeoutDuration = 10000;
-
         try {
             const response = await fetch(url, {
                 method: "POST",
