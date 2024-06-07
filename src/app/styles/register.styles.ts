@@ -55,9 +55,9 @@ export const BgRegister = styled.div`
 
 // Forms
 
-export const FormsContent = styled.form`
+export const FormsContent = styled.div`
     width: 50vw;
-    padding: 13vh 2vw 0 2vw;
+    padding: 15vh 2vw 0 2vw;
     font-family: ${inter.style.fontFamily};
     
     & label {
@@ -99,15 +99,15 @@ export const FormsContent = styled.form`
 export const FormsColumn = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 5px;
 `
 
 export const FormsRow = styled.div`
-    margin: 0 auto;
     display: flex;
-    gap: 15px;
+    justify-content: space-between;
 
-    @media screen and (max-width: 767px), screen and (min-height: 1180px) {
+@media screen and (max-width: 767px), screen and (min-height: 1180px) {
+        margin: 0 auto;
         flex-direction: column;
     }
 `
