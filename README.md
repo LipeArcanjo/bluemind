@@ -27,6 +27,7 @@ Para acessar o painel de administrador, utilize as seguintes credenciais de exem
 
 - [Vídeo de Apresentação no YouTube](https://youtu.be/BvZFRA2i64M)
 - [Repositório no GitHub](https://github.com/LipeArcanjo/bluemind)
+- [Link da Vercel](https://bluemind.vercel.app/)
 
 ## Como Contribuir
 
