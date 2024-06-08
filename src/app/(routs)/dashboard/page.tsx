@@ -60,7 +60,7 @@ export default function Dashboard() {
 
     return (
         <React.Fragment>
-            {/* {token ? ( */}
+            {token ? (
                 <React.Fragment>
                     <Header />
                     <Container>
@@ -105,14 +105,14 @@ export default function Dashboard() {
                         )}
                     </Container>
                 </React.Fragment>
-            {/* ) : (
+            ) : (
                 <React.Fragment>
                     <Header />
                     <NotAuthorized>
                         <h1>Você não está autorizado a acessar esta página, por favor faça login e tente novamente.</h1>
                     </NotAuthorized>
                 </React.Fragment>
-            )} */}
+            )}
         </React.Fragment>
     );
 }
