@@ -30,6 +30,7 @@ export default function Header() {
                 {/* Flex column */}
                 <FooterColumn>
                     <h3>BlueMind</h3>
+                    <h3>1TDSPR</h3>
                     {/* Precisa colocar os icones */}
                     <FooterIcons>
                         {socialIcons.map((social, index) => (
