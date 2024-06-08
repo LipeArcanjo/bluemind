@@ -5,6 +5,8 @@ Bem-vindo ao repositório do projeto Front-End do BlueMind! Este projeto faz par
 
 ## Páginas do Projeto
 
+É possível que os estilos das páginas apresentem um erro ao carregar na Vercel. Para corrigir isso, basta clicar no menu ao lado do logo da BlueMind e se redirecionar para qualquer página que a estilização será renderizada corretamente.
+
 - **Home**: Página inicial com uma visão geral.
 - **About Us**: Informações sobre o projeto, equipe e missão do BlueMind.
 - **Login (Painel de Administrador)**: Página de autenticação para administradores acessarem o painel de controle.
