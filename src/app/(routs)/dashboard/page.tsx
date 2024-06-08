@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { NotAuthorized, Container, Nav, Card, Stats, StatItem, Loading } from "../../styles/dashboard.styles"
+import { NotAuthorized, Container, Nav, Card, Stats, StatItem, Loading } from "../../styles/dashboard.styles";
 import Header from "@/components/Header";
 import { Button } from "@/components/Button";
 
@@ -22,12 +22,17 @@ interface Report {
 }
 
 export default function Dashboard() {
-    const token = sessionStorage.getItem("userToken");
-    const fullname = sessionStorage.getItem("fullname");
+    const [token, setToken] = useState<string | null>(null);
+    const [fullname, setFullname] = useState<string | null>(null);
     const router = useRouter();
 
     const [reports, setReports] = useState<Report[]>([]);
     const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        setToken(sessionStorage.getItem("userToken"));
+        setFullname(sessionStorage.getItem("fullname"));
+    }, []);
 
     const handleLogout = () => {
         sessionStorage.removeItem("userToken");
