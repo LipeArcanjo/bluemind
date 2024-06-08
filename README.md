@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BlueMind Front-End
 
-## Getting Started
+## Visão Geral
+Bem-vindo ao repositório do projeto Front-End do BlueMind! Este projeto faz parte da iniciativa FIAP Global Solution e tem como objetivo criar uma plataforma inovadora para que pescadores, mergulhadores, surfistas e outros amantes do mar possam compartilhar suas observações sobre a vida marinha e reportar acidentes e incidentes marinhos em tempo real.
 
-First, run the development server:
+## Páginas do Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Home**: Página inicial com uma visão geral.
+- **About Us**: Informações sobre o projeto, equipe e missão do BlueMind.
+- **Login (Painel de Administrador)**: Página de autenticação para administradores acessarem o painel de controle.
+- **Dashboard**: Painel de controle para visualização e gestão de dados reportados.
+- **Register**: Página de registro para novos contribuintes registrarem reportes como acidentes, incidentes e observações da vida marinha.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## APIs Utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Python API**: Responsável pela autenticação de login.
+- **Java API**: Lida com a Programação Orientada a Objetos (POO) e a renderização de dados na página.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Credenciais de Login de Exemplo
 
-## Learn More
+Para acessar o painel de administrador, utilize as seguintes credenciais de exemplo:
 
-To learn more about Next.js, take a look at the following resources:
+- **Usuário**: felipe.arcanjo_adm
+- **Senha**: FelipeAMS@0909
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Links Úteis
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [Vídeo de Apresentação no YouTube](https://youtu.be/BvZFRA2i64M)
+- [Repositório no GitHub](https://github.com/LipeArcanjo/bluemind)
 
-## Deploy on Vercel
+## Como Contribuir
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Sinta-se à vontade para fazer fork deste repositório e contribuir com melhorias. Para começar:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Faça um fork do repositório.
+2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`).
+3. Commit suas alterações (`git commit -m 'Adiciona nova feature'`).
+4. Faça push para a branch (`git push origin feature/nova-feature`).
+5. Abra um Pull Request.
+
+## Contato
+
+Se você tiver alguma dúvida, sinta-se à vontade para nos contatar através dos canais disponíveis no [repositório do GitHub](https://github.com/LipeArcanjo).
+
+---
+
+"A terra não pertence ao homem, o homem é que pertence à terra. O que fere a terra, fere também os filhos da terra."
+
+Obrigado por fazer parte desta jornada para proteger nossos oceanos com a BlueMind - Mente azul, Tecnologia Azul!
