@@ -48,13 +48,8 @@ export const Nav = styled.nav`
     justify-content: space-between;
 
     & button {
-        padding: 0 2vw;
-        font-size: 1.2rem;
-        border-radius: 50px;
-        color: ${colors.commom.white};
+        margin: 0;
         background-color: ${colors.danger};
-        border:none;
-        cursor: pointer;
     }
 `;
 

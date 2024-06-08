@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { NotAuthorized, Container, Nav, Card, Stats, StatItem, Loading } from "../../styles/dashboard.styles"
 import Header from "@/components/Header";
+import { Button } from "@/components/Button";
 
 interface Report {
     id: number;
@@ -59,15 +60,15 @@ export default function Dashboard() {
 
     return (
         <React.Fragment>
-            {token ? (
+            {/* {token ? ( */}
                 <React.Fragment>
                     <Header />
                     <Container>
                         <Nav>
                             <h1>Olá, {fullname}!</h1>
-                            <button onClick={handleLogout}>
+                            <Button onClick={handleLogout} size={"large"}>
                                 Sair
-                            </button>
+                            </Button>
                         </Nav>
                         <Stats>
                             <StatItem>
@@ -104,14 +105,14 @@ export default function Dashboard() {
                         )}
                     </Container>
                 </React.Fragment>
-            ) : (
+            {/* ) : (
                 <React.Fragment>
                     <Header />
                     <NotAuthorized>
                         <h1>Você não está autorizado a acessar esta página, por favor faça login e tente novamente.</h1>
                     </NotAuthorized>
                 </React.Fragment>
-            )}
+            )} */}
         </React.Fragment>
     );
 }

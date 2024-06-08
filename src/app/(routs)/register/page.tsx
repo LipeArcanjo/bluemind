@@ -12,6 +12,7 @@ import {
     RegisterComponent,
 } from "@/app/styles/register.styles";
 import Header from "@/components/Header";
+import { Button } from "@/components/Button";
 
 export default function Register() {
     const [nomeCompleto, setNomeCompleto] = useState("");
@@ -208,8 +209,8 @@ export default function Register() {
                             onChange={handleMidia}
                         />
                         <ButtonGroup>
-                            <button type="button" onClick={() => router.push("/")}>CANCELAR</button>
-                            <button type="submit">ENVIAR</button>
+                            <Button type="button" onClick={() => router.push("/")} size={"small"} color={"green"}>CANCELAR</Button>
+                            <Button type="submit" size={"small"} color={"blue"}>ENVIAR</Button>
                         </ButtonGroup>
                     </FormsColumn>
                 </form>

@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { LoginBox, LoginContainer } from "../../styles/login.styles"
 import Header from "@/components/Header"
+import { Button } from "@/components/Button";
 
 export default function Login() {
 
@@ -82,7 +83,7 @@ export default function Login() {
                         value={senha}
                         onChange={(e) => setSenha(e.target.value)}
                     />
-                    <button type="submit">Button</button>
+                    <Button type="submit" size={"small"} color={"blue"}>Button</Button>
                 </form>
             </LoginBox>
         </LoginContainer>

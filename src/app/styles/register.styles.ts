@@ -126,21 +126,5 @@ export const ButtonGroup = styled.div`
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-
-    & button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    }
-
-    & button[type="button"] {
-    background-color: ${colors.green.dark};
-    color: ${colors.commom.white};
-    }
-
-    & button[type="submit"] {
-    background-color: ${colors.major.main};
-    color: ${colors.commom.white};
 }
 `

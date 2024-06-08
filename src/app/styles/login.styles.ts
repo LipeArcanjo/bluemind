@@ -39,35 +39,22 @@ export const LoginBox = styled.div`
         width: 300px;
         display: flex;
         flex-direction: column;
-    }
-
-    & label {
-        display: block;
-        margin: 10px 0 5px;
-    }
-
-    & input {
-        width: 300px;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-    }
-
-    & button {
-        margin: 3vh auto 0 auto;
-        width: 50%;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        background-color: ${colors.green.light};
-        color: ${colors.commom.white};
-        font-size: 1rem;
-    }
-
-    & button:hover {
-        background-color: ${colors.green.dark};
-        cursor: pointer;
-        transition: 400ms ease-in-out;
+        }
+        
+        & label {
+            display: block;
+            margin: 10px 0 5px;
+            }
+            
+        & input {
+            width: 300px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            }
+        
+    & input:nth-child(4) {
+        margin-bottom: 3vh;
     }
 `

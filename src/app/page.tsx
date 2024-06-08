@@ -13,6 +13,7 @@ import monitorizacao from "../../public/images/monitorizacao.png";
 import conscicentizacao from "../../public/images/conscientizacao.png";
 import tratar from "../../public/images/tratar.png";
 import cientista from "../../public/images/cientista.png";
+import { Button } from "@/components/Button/index";
 
 export default function Home() {
 
@@ -62,9 +63,9 @@ export default function Home() {
             <p>
               Nossa missão é conectar a comunidade marinha, fornecer dados valiosos para cientistas e ajudar órgãos responsáveis a tratar áreas afetadas, com conscientização, engajamento e sustentabilidade dos recursos marinhos.
             </p>
-            <button>
-              Button
-            </button>
+            <Button size={"large"} color={"green"}>
+              Saiba mais!
+            </Button>
           </TextContent>
           <ImageContent>
             <Image

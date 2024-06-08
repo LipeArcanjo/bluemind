@@ -73,17 +73,6 @@ export const TextContent = styled.div`
     line-height: 1.5;
     text-align: justify;
     
-    & Button {
-        padding: 1vh 1.5vw;
-        margin: 0 auto;
-        font-family: ${inter.style.fontFamily};
-        font-size:1.5rem;
-        background-color: ${colors.green.light};
-        color: ${colors.commom.white};
-        border-radius: 50px;
-        border: 1px solid ${colors.blue.border}
-    }
-    
     & p{
         margin-bottom: 1.2vh;
     }
